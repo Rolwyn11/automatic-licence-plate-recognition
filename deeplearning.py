@@ -6,7 +6,7 @@ from tensorflow.keras.preprocessing.image import load_img, img_to_array
 import pytesseract as pt
 import re
 
-model = tf.lite.TFLiteConverter.from_saved_model('./static/models/object_detection.h5')
+model = tf.lite.TFLiteConverter.from_keras_model('./static/models/object_detection.h5')
 
 def object_detection(path,filename):
     # read image
